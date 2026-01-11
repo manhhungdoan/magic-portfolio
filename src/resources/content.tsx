@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  firstName: "Manh Hung",
+  lastName: "Doan",
+  name: `Manh Hung Doan`,
+  role: "Frontend developer",
+  avatar: "/images/avatar.webp",
+  email: "hungthiendoan@gmail.com",
+  location: "Asia/Ho_Chi_Minh", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Vietnamese", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -25,25 +25,7 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
-    essential: true,
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://github.com/manhhungdoan",
     essential: true,
   },
   {
@@ -60,12 +42,12 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building scalable web applications with modern architecture</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">hungdm</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
           Featured work
@@ -76,8 +58,13 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
-</>
+      I'm Manh Hung, a Frontend Team Lead specializing in{" "}
+      <Text as="span" size="xl" weight="strong">
+        ReactJS
+      </Text>
+      , microfrontend architecture, and performance optimization for <br /> enterprise fintech
+      solutions.
+    </>
   ),
 };
 
@@ -102,9 +89,11 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Frontend Developer with 3+ years in enterprise web applications and 1+ year leading teams in
+        fintech platforms. Strong expertise in React, microfrontend/monorepo architectures, and
+        performance optimization. Led a 3-member team with responsibilities including technical
+        decisions, code review, and production deployment to Red Hat servers in bank-grade security
+        environments
       </>
     ),
   },
@@ -113,41 +102,57 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SFIN .JSC",
+        timeframe: "Jul 2024 - Present",
+        role: "Web Team Lead",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Led a team of 3 developers using Agile/Scrum, increasing project delivery speed by 25%
+            through effective sprint planning and task prioritization
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Drove frontend technical decisions across enterprise and fintech projects, ensuring
+            scalability, performance, and security standards
+          </>,
+          <>
+            Enforced coding standards and Git Flow through code reviews, mentoring junior developers
+            to improve overall code quality by 30%+
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
+        company: "SFIN .JSC",
+        timeframe: "Jan 2023 - Jun 2024",
         role: "Lead Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Developed and maintained 3-5 large-scale web applications using ReactJS, Redux Toolkit,
+            Ant design and modern frontend technologies
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Migrated build tooling from Webpack to Vite or RSBuild, improving build performance by
+            90% and simplifying configuration
+          </>,
+          <>
+            Optimized performance by 97% (15MB → 500KB bundle size) through code splitting, lazy
+            loading, and tree-shaking, reducing load time by 70%+
+          </>,
+          <>
+            Optimized Dockerfile and CI/CD pipelines with Jenkins, reducing deployment time from 15
+            minutes to under 1 minute with zero-downtime releases
+          </>,
+          <>
+            Re-architected legacy codebases into monorepo and microfrontend structures, reducing
+            code duplication by 30% and improving build times by 25%
           </>,
         ],
         images: [],
@@ -159,12 +164,8 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Hanoi University of Industry",
+        description: <>Information technology</>,
       },
     ],
   },
@@ -173,60 +174,126 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "ReactJS Ecosystem",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Expert in building large-scale applications with React, Redux Toolkit, and React Router.
+            Specialized in performance optimization and component architecture.
+          </>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "ReactJS", icon: "react" },
+          { name: "Redux", icon: "redux" },
+          { name: "TypeScript", icon: "typescript" },
+          { name: "Next.js", icon: "nextjs" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Microfrontend Architecture",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Experienced in designing and implementing microfrontend systems with independent module
+            deployment. Re-architected enterprise platforms reducing code duplication by 30%.
+          </>
         ),
         tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
+          { name: "Microfrontend", icon: "grid" },
+          { name: "Module Federation", icon: "puzzle" },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+        images: [],
+      },
+      {
+        title: "Monorepo & Build Tools",
+        description: (
+          <>
+            Proficient in managing large codebases with Turborepo and Nx. Migrated from Webpack to
+            RSBuild, improving build times by 25%.
+          </>
+        ),
+        tags: [
+          { name: "Turborepo", icon: "turborepo" },
+          { name: "RSBuild", icon: "rsbuild" },
+          { name: "Vite", icon: "vite" },
+          { name: "Webpack", icon: "webpack" },
         ],
+        images: [],
+      },
+      {
+        title: "Performance Optimization",
+        description: (
+          <>
+            Achieved 97% bundle size reduction (15MB → 500KB) through code splitting, lazy loading,
+            and tree-shaking. Reduced load time by 70%+.
+          </>
+        ),
+        tags: [
+          { name: "Code Splitting", icon: "zap" },
+          { name: "Lazy Loading", icon: "download" },
+          { name: "Tree Shaking", icon: "scissors" },
+        ],
+        images: [],
+      },
+      {
+        title: "UI Libraries & Styling",
+        description: (
+          <>
+            Skilled in building responsive, accessible UIs with Ant Design and Tailwind CSS. Created
+            15+ reusable components used across multiple projects.
+          </>
+        ),
+        tags: [
+          { name: "Ant Design", icon: "antd" },
+          { name: "Tailwind CSS", icon: "tailwind" },
+          { name: "CSS3", icon: "css" },
+        ],
+        images: [],
+      },
+      {
+        title: "DevOps & Deployment",
+        description: (
+          <>
+            Experienced with Docker, Jenkins CI/CD pipelines, and deployment to RedHat Linux
+            servers. Reduced deployment time from 15 minutes to under 1 minute.
+          </>
+        ),
+        tags: [
+          { name: "Docker", icon: "docker" },
+          { name: "Jenkins", icon: "jenkins" },
+          { name: "RedHat Linux", icon: "redhat" },
+          { name: "Nginx", icon: "nginx" },
+        ],
+        images: [],
+      },
+      {
+        title: "API Integration & i18n",
+        description: (
+          <>
+            Proficient in integrating RESTful APIs and implementing multi-language support (i18n)
+            for international applications.
+          </>
+        ),
+        tags: [
+          { name: "REST API", icon: "api" },
+          { name: "i18n", icon: "globe" },
+          { name: "Axios", icon: "axios" },
+        ],
+        images: [],
+      },
+      {
+        title: "Version Control & Workflow",
+        description: (
+          <>
+            Strong Git expertise with Gitflow workflow. Enforced coding standards through code
+            reviews, improving team code quality by 30%+.
+          </>
+        ),
+        tags: [
+          { name: "Git", icon: "git" },
+          { name: "Gitflow", icon: "git-branch" },
+          { name: "Code Review", icon: "code" },
+        ],
+        images: [],
       },
     ],
   },

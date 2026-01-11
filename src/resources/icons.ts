@@ -1,35 +1,63 @@
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 import {
-  HiArrowUpRight,
-  HiOutlineLink,
-  HiArrowTopRightOnSquare,
-  HiEnvelope,
-  HiCalendarDays,
   HiArrowRight,
+  HiArrowTopRightOnSquare,
+  HiArrowUpRight,
+  HiCalendarDays,
+  HiEnvelope,
+  HiOutlineDocument,
   HiOutlineEye,
   HiOutlineEyeSlash,
-  HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
+  HiOutlineLink,
   HiOutlineRocketLaunch,
 } from "react-icons/hi2";
 
 import {
-  PiHouseDuotone,
-  PiUserCircleDuotone,
-  PiGridFourDuotone,
   PiBookBookmarkDuotone,
+  PiGridFourDuotone,
+  PiHouseDuotone,
   PiImageDuotone,
+  PiUserCircleDuotone,
 } from "react-icons/pi";
 
+import { RiNextjsLine } from "react-icons/ri";
 import {
-  SiJavascript,
-  SiNextdotjs,
+  SiAntdesign,
+  SiAxios,
   SiFigma,
+  SiJavascript,
+  SiJenkins,
+  SiNginx,
+  SiReact,
+  SiRedhat,
+  SiRedux,
   SiSupabase,
+  SiTailwindcss,
+  SiTurborepo,
+  SiWebpack,
 } from "react-icons/si";
+import { TbBrandDocker, TbBrandTypescript, TbBrandVite, TbPuzzle } from "react-icons/tb";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaCode, FaGitAlt } from "react-icons/fa";
+import {
+  FaDiscord,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaPinterest,
+  FaReddit,
+  FaTelegram,
+  FaThreads,
+  FaWhatsapp,
+  FaX,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { GrDeploy } from "react-icons/gr";
+import { IoCodeSlashOutline, IoGitBranchOutline } from "react-icons/io5";
+import { MdBuild } from "react-icons/md";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -55,7 +83,7 @@ export const iconLibrary: Record<string, IconType> = {
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
   javascript: SiJavascript,
-  nextjs: SiNextdotjs,
+  nextjs: RiNextjsLine,
   supabase: SiSupabase,
   figma: SiFigma,
   facebook: FaFacebook,
@@ -64,6 +92,24 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  redux: SiRedux,
+  typescript: TbBrandTypescript,
+  react: SiReact,
+  puzzle: TbPuzzle,
+  turborepo: SiTurborepo,
+  rsbuild: GrDeploy,
+  vite: TbBrandVite,
+  webpack: SiWebpack,
+  antd: SiAntdesign,
+  tailwind: SiTailwindcss,
+  docker: TbBrandDocker,
+  jenkins: SiJenkins,
+  redhat: SiRedhat,
+  nginx: SiNginx,
+  axios: SiAxios,
+  git: FaGitAlt,
+  "git-branch": IoGitBranchOutline,
+  code: IoCodeSlashOutline,
 };
 
 export type IconLibrary = typeof iconLibrary;
