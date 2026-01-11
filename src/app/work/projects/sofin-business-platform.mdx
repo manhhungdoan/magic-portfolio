@@ -1,0 +1,108 @@
+---
+title: "SOFIN Business Platform"
+publishedAt: "2026-01-11"
+summary: "Enterprise-scale platform with microfrontend architecture, including SHOP CMS, SPA CMS, Leadgen CRM, Web Builder, Landing Pages, Platform CMS, and Invoice System. Designed to serve internal operations and external clients with independent module deployment, content management, customizable page builder, and automated billing workflows."
+images:
+  - "/images/projects/sofin/shop-landing.png"
+  - "/images/projects/sofin/shop-business.png"
+  - "/images/projects/sofin/spa-landing.png"
+  - "/images/projects/sofin/spa-business.png"
+  - "/images/projects/sofin/web-builder.png"
+  - "/images/projects/sofin/invoice.png"
+  - "/images/projects/sofin/leadgen.png"
+team:
+  - name: "Manh Hung Doan"
+    role: "Frontend Team Lead"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/mhungdoan"
+  - name: "SFIN JSC"
+    role: "Company"
+    avatar: "/images/sfin_logo.png"
+    linkedIn: "https://sfin.vn"
+---
+
+## Overview
+
+SOFIN Business Platform is a comprehensive enterprise-scale ecosystem designed to manage and streamline business operations for both internal teams and external clients. Built from January 2024 to present, this multi-module platform serves as the backbone of SOFIN's digital infrastructure, encompassing multiple CMS systems, lead generation tools, web building capabilities, and invoice management—all unified under a modern microfrontend architecture.
+
+As Frontend Team Lead on this project, I was responsible for architecting the technical foundation, leading a team of 3 developers, and ensuring the platform could scale to meet the demands of a rapidly growing fintech business. The platform needed to support independent module development while maintaining consistency across the entire ecosystem.
+
+## Key Features
+
+### Multiple CMS Systems
+
+The platform includes three distinct CMS solutions—**SHOP CMS** for e-commerce management, **SPA CMS** for single-page applications, and **Platform CMS** for overall system administration. Each CMS is designed with specific workflows tailored to different business needs, allowing teams to manage content, products, and operations independently.
+
+### Web Builder & Landing Page System
+
+One of the most innovative features is the drag-and-drop Web Builder, which empowers non-technical users to create SEO-optimized landing pages without writing code. This feature reduced page creation time by **3x** and gave marketing teams the autonomy to launch campaigns quickly.
+
+### Leadgen CRM
+
+The integrated lead generation and customer relationship management system captures, tracks, and nurtures leads throughout the sales funnel. It provides real-time analytics and automated workflows to improve conversion rates.
+
+### SOFIN Invoice
+
+A comprehensive billing and invoice management module that automates financial workflows, generates invoices, tracks payments, and integrates with accounting systems.
+
+### Microfrontend Architecture
+
+Each module operates independently with its own deployment pipeline, allowing teams to work in parallel without blocking each other. This architecture ensures that updates to one module don't impact the stability of others.
+
+## Technologies Used
+
+The platform is built on a modern tech stack centered around **React** and **TypeScript** for type safety and maintainability. We utilized **Redux Toolkit** for state management across complex workflows and **React Router** for seamless navigation between modules.
+
+Build tooling was critical for performance. We migrated from **Webpack** to **RSBuild**, which improved build times by **25%** and simplified our configuration. **Vite** was used for rapid development with hot module replacement, while production builds leveraged RSBuild's optimization capabilities.
+
+For UI consistency, we standardized on **Ant Design** as our component library, customizing it to match SOFIN's brand guidelines. **Tailwind CSS** was used for utility-first styling where more flexibility was needed.
+
+The DevOps pipeline leveraged **Docker** for containerization, **Jenkins** for CI/CD automation, and **Linux** servers for production deployment. **Nginx** handled load balancing and reverse proxy configurations.
+
+## Challenges and Learnings
+
+### Performance at Scale
+
+One of the biggest challenges was managing bundle sizes as the platform grew. The initial implementation resulted in a monolithic 15MB bundle that severely impacted load times, especially for users on slower connections. Through aggressive code splitting, lazy loading, tree-shaking, and route-based chunking, we achieved a **97% reduction**—bringing the initial bundle down to just **500KB**. This optimization improved page load times by over **70%** and significantly enhanced user experience.
+
+### Microfrontend Coordination
+
+While microfrontend architecture provided independence, it also introduced complexity in shared state management, cross-module communication, and consistent styling. We solved this by creating a shared component library and establishing clear contracts between modules. Module federation helped us share dependencies efficiently without duplicating code.
+
+### Deployment Orchestration
+
+Coordinating deployments across multiple modules while ensuring zero downtime was challenging. We implemented a blue-green deployment strategy with health checks and automated rollbacks. By optimizing our CI/CD pipeline in Jenkins and streamlining Docker builds, we reduced deployment time from **15 minutes to under 1 minute**.
+
+### Team Collaboration
+
+Leading a team of 3 developers while maintaining code quality required establishing clear processes. We enforced Git Flow, mandatory code reviews, and comprehensive documentation. Weekly progress reports to management ensured alignment with business objectives, while daily standups kept the team synchronized.
+
+### Legacy Code Migration
+
+Parts of the platform involved refactoring legacy codebases into the new architecture. This required careful planning to migrate incrementally without disrupting existing users. We adopted a strangler fig pattern, gradually replacing old modules while maintaining backward compatibility.
+
+## Outcome
+
+The SOFIN Business Platform has become a critical infrastructure serving thousands of internal users and external clients daily. The microfrontend architecture enabled our team to increase feature delivery speed by **25%**, allowing business teams to launch new products and campaigns faster than ever before.
+
+The performance optimizations—particularly the **97% bundle size reduction**—resulted in measurably better user engagement metrics and reduced bounce rates. The Web Builder feature alone empowered the marketing team to create over **10 landing pages** in the first two months, a task that previously required developer involvement for each page.
+
+The project also accelerated my growth as a technical leader. I learned how to balance technical excellence with business priorities, mentor developers effectively, and communicate complex technical decisions to non-technical stakeholders. The experience reinforced the importance of architecting for scalability from the start and the value of investing in automation and developer experience.
+
+Most importantly, the platform established a solid foundation for SOFIN's continued growth, with an architecture that can easily accommodate new modules and features as the business evolves.
+
+---
+
+## Key Metrics
+
+- **Bundle Size Reduction**: 97% (15MB → 500KB)
+- **Load Time Improvement**: 70%+
+- **Code Duplication**: Reduced by 30%
+- **Build & Deploy Time**: Improved by 93%
+- **Team Delivery Speed**: Increased by 25%
+
+## Technologies
+
+- React, NextJS, TypeScript, Redux Toolkit, React Router
+- Ant Design, Tailwind CSS
+- RSBuild, Microfrontend
