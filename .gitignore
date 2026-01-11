@@ -16,6 +16,10 @@
 # production
 /build
 
+# standalone output
+.next/standalone
+.next/static
+
 # misc
 .DS_Store
 *.pem
