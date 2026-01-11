@@ -1,6 +1,7 @@
 {
-  "name": "@once-ui-system/magic-portfolio",
-  "version": "2.3.0",
+  "name": "mhung-portfolio",
+  "version": "1.0.0",
+  "license": "CC-BY-NC-4.0",
   "scripts": {
     "dev": "next dev",
     "export": "next export",
