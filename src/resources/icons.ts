@@ -37,6 +37,7 @@ import {
   SiTailwindcss,
   SiTurborepo,
   SiWebpack,
+  SiZalo,
 } from "react-icons/si";
 import { TbBrandDocker, TbBrandTypescript, TbBrandVite, TbPuzzle } from "react-icons/tb";
 
@@ -110,6 +111,7 @@ export const iconLibrary: Record<string, IconType> = {
   git: FaGitAlt,
   "git-branch": IoGitBranchOutline,
   code: IoCodeSlashOutline,
+  zalo: SiZalo,
 };
 
 export type IconLibrary = typeof iconLibrary;

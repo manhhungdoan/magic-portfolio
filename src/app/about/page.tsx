@@ -1,3 +1,6 @@
+import TableOfContents from "@/components/about/TableOfContents";
+import styles from "@/components/about/about.module.scss";
+import { about, baseURL, person, social } from "@/resources";
 import {
   Avatar,
   Button,
@@ -6,15 +9,12 @@ import {
   Icon,
   IconButton,
   Media,
+  Meta,
+  Row,
+  Schema,
   Tag,
   Text,
-  Meta,
-  Schema,
-  Row,
 } from "@once-ui-system/core";
-import { baseURL, about, person, social } from "@/resources";
-import TableOfContents from "@/components/about/TableOfContents";
-import styles from "@/components/about/about.module.scss";
 import React from "react";
 
 export async function generateMetadata() {
@@ -49,6 +49,11 @@ export default function About() {
       display: about.technical.display,
       items: about.technical.skills.map((skill) => skill.title),
     },
+    {
+      title: about.awards.title,
+      display: about.awards.display,
+      items: about.awards.items.map((item) => item.title),
+    },
   ];
   return (
     <Column maxWidth="m">
@@ -77,7 +82,7 @@ export default function About() {
           <TableOfContents structure={structure} about={about} />
         </Column>
       )}
-      <Row fillWidth s={{ direction: "column"}} horizontal="center">
+      <Row fillWidth s={{ direction: "column" }} horizontal="center">
         {about.avatar.display && (
           <Column
             className={styles.avatar}
@@ -164,34 +169,34 @@ export default function About() {
                 data-border="rounded"
               >
                 {social
-                      .filter((item) => item.essential)
-                      .map(
-                  (item) =>
-                    item.link && (
-                      <React.Fragment key={item.name}>
-                        <Row s={{ hide: true }}>
-                          <Button
-                            key={item.name}
-                            href={item.link}
-                            prefixIcon={item.icon}
-                            label={item.name}
-                            size="s"
-                            weight="default"
-                            variant="secondary"
-                          />
-                        </Row>
-                        <Row hide s={{ hide: false }}>
-                          <IconButton
-                            size="l"
-                            key={`${item.name}-icon`}
-                            href={item.link}
-                            icon={item.icon}
-                            variant="secondary"
-                          />
-                        </Row>
-                      </React.Fragment>
-                    ),
-                )}
+                  .filter((item) => item.essential)
+                  .map(
+                    (item) =>
+                      item.link && (
+                        <React.Fragment key={item.name}>
+                          <Row s={{ hide: true }}>
+                            <Button
+                              key={item.name}
+                              href={item.link}
+                              prefixIcon={item.icon}
+                              label={item.name}
+                              size="s"
+                              weight="default"
+                              variant="secondary"
+                            />
+                          </Row>
+                          <Row hide s={{ hide: false }}>
+                            <IconButton
+                              size="l"
+                              key={`${item.name}-icon`}
+                              href={item.link}
+                              icon={item.icon}
+                              variant="secondary"
+                            />
+                          </Row>
+                        </React.Fragment>
+                      ),
+                  )}
               </Row>
             )}
           </Column>
@@ -330,6 +335,31 @@ export default function About() {
                         ))}
                       </Row>
                     )}
+                  </Column>
+                ))}
+              </Column>
+            </>
+          )}
+          {about.awards.display && (
+            <>
+              <Heading
+                as="h2"
+                id={about.awards.title}
+                variant="display-strong-s"
+                marginBottom="40"
+                marginTop="40"
+              >
+                {about.awards.title}
+              </Heading>
+              <Column fillWidth gap="l">
+                {about.awards.items.map((award, index) => (
+                  <Column key={`${award}-${index}`} fillWidth gap="4">
+                    <Text id={award.title} variant="heading-strong-l">
+                      {award.title}
+                    </Text>
+                    <Text variant="body-default-m" onBackground="neutral-weak">
+                      {award.description}
+                    </Text>
                   </Column>
                 ))}
               </Column>

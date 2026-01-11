@@ -23,15 +23,27 @@ const social: Social = [
   // Import new icons in /once-ui/icons.ts
   // Set essentials: true for links you want to show on the about page
   {
+    name: "Email",
+    icon: "email",
+    link: `mailto:${person.email}`,
+    essential: true,
+  },
+  {
+    name: "Zalo",
+    icon: "zalo",
+    link: `https://zalo.me/0777432921`,
+    essential: true,
+  },
+  {
     name: "GitHub",
     icon: "github",
     link: "https://github.com/manhhungdoan",
     essential: true,
   },
   {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
+    name: "LinkedIn",
+    icon: "linkedin",
+    link: "https://www.linkedin.com/in/mhungdoan/",
     essential: true,
   },
 ];
@@ -104,35 +116,34 @@ const about: About = {
       {
         company: "SFIN .JSC",
         timeframe: "Jul 2024 - Present",
-        role: "Web Team Lead",
+        role: "Frontend Team Lead",
         achievements: [
           <>
             Led a team of 3 developers using Agile/Scrum, increasing project delivery speed by 25%
             through effective sprint planning and task prioritization
           </>,
           <>
-            Drove frontend technical decisions across enterprise and fintech projects, ensuring
-            scalability, performance, and security standards
+            Established best practices for microfrontend architecture and monorepo structure across
+            multiple team projects
           </>,
           <>
             Enforced coding standards and Git Flow through code reviews, mentoring junior developers
             to improve overall code quality by 30%+
           </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          // {
-          //   src: "/images/projects/project-01/cover-01.jpg",
-          //   alt: "Once UI Project",
-          //   width: 16,
-          //   height: 9,
-          // },
+          <>
+            Delivered multiple projects for banking and financial institution partners, meeting
+            bank-grade security and compliance requirements
+          </>,
+          <>
+            Ensured production readiness and system stability in critical payment environments
+            through deployment coordination and monitoring
+          </>,
         ],
       },
       {
         company: "SFIN .JSC",
         timeframe: "Jan 2023 - Jun 2024",
-        role: "Lead Designer",
+        role: "Frontend Developer",
         achievements: [
           <>
             Developed and maintained 3-5 large-scale web applications using ReactJS, Redux Toolkit,
@@ -149,10 +160,6 @@ const about: About = {
           <>
             Optimized Dockerfile and CI/CD pipelines with Jenkins, reducing deployment time from 15
             minutes to under 1 minute with zero-downtime releases
-          </>,
-          <>
-            Re-architected legacy codebases into monorepo and microfrontend structures, reducing
-            code duplication by 30% and improving build times by 25%
           </>,
         ],
         images: [],
@@ -294,6 +301,23 @@ const about: About = {
           { name: "Code Review", icon: "code" },
         ],
         images: [],
+      },
+    ],
+  },
+  awards: {
+    display: true,
+    title: "Awards & Certifications",
+    items: [
+      {
+        title: "SFIN Warrior of the Year 2024",
+        year: "2024",
+        description: (
+          <>
+            Awarded for outstanding contributions to the development and performance optimization of
+            the SOFIN Business Platform
+          </>
+        ),
+        organization: "SFIN",
       },
     ],
   },

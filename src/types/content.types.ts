@@ -1,5 +1,6 @@
-import { IconName } from "@/resources/icons";
-import { zones } from "tzdata";
+import type { IconName } from "@/resources/icons";
+import type { ReactNode } from "react";
+import type { zones } from "tzdata";
 
 /**
  * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').
@@ -207,6 +208,23 @@ export interface About extends BasePageConfig {
         /** Image height ratio */
         height: number;
       }>;
+    }>;
+  };
+  awards: {
+    /** Whether to display awards section */
+    display: boolean;
+    /** Title for the awards section */
+    title: string;
+    /** List of awards received */
+    items: Array<{
+      /** Award title */
+      title: string;
+      /** Awarding organization */
+      organization: string;
+      /** Year received */
+      year: string;
+      /** Description of the award */
+      description?: ReactNode;
     }>;
   };
 }
