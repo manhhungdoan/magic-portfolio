@@ -33,7 +33,6 @@ const nextConfig = {
   output: "standalone",
   
   // Build optimizations
-  swcMinify: true,
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ["@once-ui-system/core", "react-icons"],
