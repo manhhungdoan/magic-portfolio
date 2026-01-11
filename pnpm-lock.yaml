@@ -57,6 +57,9 @@ importers:
       '@types/cookie':
         specifier: ^0.6.0
         version: 0.6.0
+      '@types/next':
+        specifier: ^9.0.0
+        version: 9.0.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
       '@types/node':
         specifier: ^20.17.30
         version: 20.19.28
@@ -578,6 +581,10 @@ packages:
 
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
+
+  '@types/next@9.0.0':
+    resolution: {integrity: sha512-gnBXM8rP1mnCgT1uE2z8SnpFTKRWReJlhbZLZkOLq/CH1ifvTNwjIVtXvsywTy1dwVklf+y/MB0Eh6FOa94yrg==}
+    deprecated: This is a stub types definition. next provides its own type definitions, so you do not need this installed.
 
   '@types/node@20.19.28':
     resolution: {integrity: sha512-VyKBr25BuFDzBFCK5sUM6ZXiWfqgCTwTAOK8qzGV/m9FCirXYDlmczJ+d5dXBAQALGCdRRdbteKYfJ84NGEusw==}
@@ -2069,6 +2076,19 @@ snapshots:
   '@types/mdx@2.0.13': {}
 
   '@types/ms@2.1.0': {}
+
+  '@types/next@9.0.0(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)':
+    dependencies:
+      next: 16.1.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.2)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - '@opentelemetry/api'
+      - '@playwright/test'
+      - babel-plugin-macros
+      - babel-plugin-react-compiler
+      - react
+      - react-dom
+      - sass
 
   '@types/node@20.19.28':
     dependencies:
